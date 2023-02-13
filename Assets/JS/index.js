@@ -269,6 +269,11 @@ function addNewUser() {
       showConfirmButton: false,
       timer: 1500,
     });
+
+    setTimeout(function(){
+      window.location.href = "/LaGaleriaApp/index.html";
+    },1500);
+    
   } else {
     // for (var i = 0; i < allUsersContainer.length; i++) {
     //   if (allUsersContainer[i].userUName.includes(user.userUName)) {
@@ -323,7 +328,7 @@ function addNewUser() {
         },1500);
       }
     } else {
-      console.log("no add");
+      //console.log("no add");
     }
   }
 

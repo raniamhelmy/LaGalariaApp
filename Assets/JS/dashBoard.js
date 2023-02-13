@@ -35,6 +35,15 @@ LogOutBtnB.addEventListener("click", function () {
   logOut();
 });
 
+// get the size of window when page Loads
+documentHTML.addEventListener("DOMContentLoaded", function () {
+  if (window.innerWidth < 575.9808) {
+    bottomBar.classList.remove("d-none");
+  } else {
+    bottomBar.classList.add("d-none");
+  }
+});
+
 window.addEventListener("resize", function () {
   if (window.innerWidth < 575.9808) {
     bottomBar.classList.remove("d-none");
