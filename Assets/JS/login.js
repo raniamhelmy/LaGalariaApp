@@ -63,7 +63,7 @@ function logIn() {
       });
     
       setTimeout(function(){
-        window.location.href = "dashBoard.html";
+        window.location.href = "/LaGaleriaApp/dashBoard.html";
       },1500);
 
     //window.location.href = "dashBoard.html";
@@ -90,7 +90,7 @@ function logIn() {
 //LogOut
 function logOut() {
   localStorage.removeItem("user");
-  window.location.href = "/index.html";
+  window.location.href = "/LaGaleriaApp/index.html";
 }
 
 //press enter to add a new user
