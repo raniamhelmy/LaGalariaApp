@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!---------------------------Fonts used in this App------------------------------------------------------>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Vollkorn:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!----------------------------- sweetAlert2 script ------------------------------->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--------------------------------Style Files ------------------------------------------>
+    <link
+      rel="stylesheet"
+      href="./Assets/CSS/bootstrap.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="./Assets/CSS/style.css" type="text/css" />
+    <link rel="stylesheet" href="./Assets/CSS/home.css" type="text/css" />
+
+    <!------------------------------WebSite Title ------------------------------------------>
+
+    <title>La Galería | Personal Image Gallery Template</title>
+
+    <!-------------------------------Browser logo------------------------------------------->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.psdgraphics.com/file/photo-gallery-icon.jpg"
+    />
+  </head>
+  <body>
+    <div class="container-fluid vh-100 d-flex px-0 w-100">
+      <div class="sideBar h-100 bg-white overflow-hidden">
+        <div class="row row-cols-1 text-center h-100">
+          <div class="col h-100">
+            <div class="links__container mx-3 h-100">
+              <h1 class="siteName text-center">La Galería</h1>
+              <ul class="list__items overflow-auto h-75">
+                <li class="list__item">
+                  <i class="fa-solid fa-house fa-xl"></i> <span>Home</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+                  <span>Search</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-compass fa-xl"></i> <span>Explore</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-paper-plane fa-xl"></i>
+                  <span>Messages</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-bell fa-xl"></i>
+                  <span>Notifications</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-plus fa-xl"></i> <span>Create</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-gear fa-xl"></i> <span>Settings</span>
+                </li>
+                <li class="list__item">
+                  <i class="fa-solid fa-user fa-xl"></i>
+                  <span>Profile</span>
+                </li>
+                <li class="list__item" id="LogOutBtn">
+                  <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
+                  <span>Log Out</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="bottomBar"
+        class="d-none bottomBar container-fluid bg-white text-dark w-100 position-fixed bottom-0 start-0 py-3 shadow"
+      >
+        <div class="container py-3">
+          <ul class="bottomBarList">
+            <li class="list__item">
+              <i class="fa-solid fa-house fa-xl"></i>
+            </li>
+            <li class="list__item">
+              <i class="fa-solid fa-magnifying-glass fa-xl"></i>
+            </li>
+            <li class="list__item">
+              <i class="fa-solid fa-paper-plane fa-xl"></i>
+            </li>
+            <li class="list__item">
+              <i class="fa-solid fa-bell fa-xl"></i>
+            </li>
+            <li class="list__item">
+              <i class="fa-solid fa-plus fa-xl"></i>
+            </li>
+            <li class="list__item">
+              <i class="fa-solid fa-user fa-xl"></i>
+            </li>
+            <li class="list__item" id="LogOutBtnB">
+              <i class="fa-solid fa-arrow-right-from-bracket fa-xl"></i>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="main__container vh-100 w-100">
+        <div class="container mt-5">
+          <div class="row row-cols-1 row-cols-lg-2 g-0">
+            <div class="col h-100 my-auto">
+              <div class="">
+                <img
+                  src="./Assets/Images/slidedr1.jpg"
+                  alt="profile-image"
+                  class="d-block w-50 mx-auto rounded-circle"
+                />
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="info__container d-flex justify-content-between align-items-center pt-lg-0 pt-5"
+              >
+                <h5 class="mb-0 mt-0">Md_rod8</h5>
+                <a>Edit Profile</a>
+                <i class="fa-solid fa-gear"></i>
+              </div>
+              <div class="desc__container mx-3 pt-md-4 pt-3">
+                <ul class="follow__desc text-center">
+                  <li><b>500</b> posts</li>
+                  <li><b>30,500</b> followers</li>
+                  <li><b>900</b> following</li>
+                </ul>
+              </div>
+              <div class="desc__container pt-4">
+                <h3>Madeline Rodriguez</h3>
+                <p>LIFESTYLE ⚡ NIGHTSTORM</p>
+                <p>DANCER & DJ 🎧</p>
+                <p>BORICUA ✊ 🇵🇷 LATINA</p>
+                <p>GX INC. ❌</p>
+                <p>NS CUSTOM</p>
+                <p>UNIVERSO FUNK</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container py-3 mt-3">
+          <div class="slider__container">
+            <div class="row gy-4">
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-1.jpg" class="w-100" />
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-2.jpg" class="w-100" />
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-3.jpg" class="w-100" />
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-4.jpg" class="w-100" />
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-5.jpg" class="w-100" />
+                </div>
+              </div>
+              <div class="col-md-4 col-sm-6 col-12">
+                <div class="item position-relative">
+                  <img src="./Assets/Images/portfolio-6.jpg" class="w-100" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            id="fixed-box"
+            class="vh-100 d-none justify-content-center align-items-center"
+          >
+            <div id="parent" class="position-relative">
+              <img
+                src="./Assets/Images/portfolio-6.jpg"
+                class="w-100"
+                id="innerImg"
+              />
+              <i class="fa-solid fa-square-xmark" id="close-btn"></i>
+              <i class="fa-solid fa-arrow-left" id="left-btn"></i>
+              <i class="fa-solid fa-arrow-right" id="right-btn"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!----------------------------- Bootstrap script ------------------------------->
+
+    <script src="./Assets/JS/bootstrap.bundle.min.js"></script>
+
+    <!----------------------------- My script ------------------------------->
+
+    <script src="./Assets/JS/dashBoard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+
+    <!---------------------------Fonts used in this App------------------------------------------------------>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Vollkorn:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!----------------------------- sweetAlert2 script ------------------------------->
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!--------------------------------Style Files ------------------------------------------>
+    <link
+      rel="stylesheet"
+      href="./Assets/CSS/bootstrap.min.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" href="./Assets/CSS/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="./Assets/CSS/style.css" type="text/css" />
+
+    <!------------------------------WebSite Title ------------------------------------------>
+
+    <title>La Galería | Personal Image Gallery Template</title>
+
+    <!-------------------------------Browser logo------------------------------------------->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://www.psdgraphics.com/file/photo-gallery-icon.jpg"
+    />
+  </head>
+  <body>
+    <div class="container pt-5 pb-3 mt-2">
+      <form class="">
+        <div class="row">
+          <div
+            class="col-12 col-sm-10 col-md-6 col-lg-5 bg-white border rounded shadow mx-auto px-3 py-5"
+          >
+            <h1 class="pb-2 siteName text-center">La Galería</h1>
+            <p class="subtitle__data text-center fw-bold mx-auto pb-1">
+              Sign up to see photos from your friends.
+            </p>
+            <div class="vstack">
+              <div class="inputData position-relative">
+                <input
+                  type="e-mail"
+                  id="emailSData"
+                  class="form-control"
+                  placeholder=" "
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <label for="emailSData">Enter Your E-mail Address</label>
+                <div
+                  id="email-alert"
+                  class="alert alert-warning d-none"
+                  role="alert"
+                >
+                  email is required
+                </div>
+              </div>
+              <div class="inputData position-relative">
+                <input
+                  type="text"
+                  id="nameData"
+                  class="form-control"
+                  placeholder=" "
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <label for="nameData">Enter Your Name</label>
+                <div
+                  id="name-alert"
+                  class="alert alert-warning d-none"
+                  role="alert"
+                >
+                  name is required
+                </div>
+              </div>
+              <div class="inputData position-relative">
+                <input
+                  type="text"
+                  id="usernameData"
+                  class="form-control"
+                  placeholder=" "
+                  aria-describedby="inputGroupPrepend"
+                  required
+                />
+                <label for="usernameData">Enter A username</label>
+                <div
+                  id="uname-alert"
+                  class="alert alert-warning d-none"
+                  role="alert"
+                >
+                  unamename is required
+                </div>
+              </div>
+
+              <div class="inputData position-relative">
+                <input
+                  type="password"
+                  id="passwordSData"
+                  class="form-control"
+                  placeholder=" "
+                />
+                <label for="passwordSData">Enter A Valid Password...</label>
+
+                <span><i id="toggler" class="fa-regular fa-eye"></i></span>
+              </div>
+              <div class="progress d-none mt-3" id="passwordBar">
+                <div
+                  id="passwordS"
+                  class="progress-bar"
+                  role="progressbar"
+                  aria-valuenow="40"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: 0%"
+                ></div>
+              </div>
+              <p class="text-muted text-center terms__text mx-auto mt-3 mb-2">
+                People who use our service may have uploaded your contact
+                information to La Galería.
+                <span class="terms__title">Learn more</span>
+              </p>
+              <p class="text-muted text-center terms__text mx-auto mb-3">
+                By signing up, you agree to our
+                <span class="terms__title">Terms</span>,
+                <span class="terms__title">Privacy Policy</span> and
+                <span class="terms__title">Cookies Policy.</span>
+              </p>
+
+              <p class="errorMsg" id="error-msg"></p>
+
+              <button
+                id="SignUp"
+                type="button"
+                class="btn btn-primary rounded-3 mt-2 d-block w-100 disabled"
+              >
+                Sign Up
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+      <div class="row">
+        <div
+          class="col-12 col-sm-10 col-md-6 col-lg-5 bg-white border rounded shadow mx-auto px-3 py-4 mt-3"
+        >
+          <div class="signUp__container text-center">
+            Already have an account?
+            <a
+              href="/index.html"
+              rel="noopener"
+              class="fw-bold text-decoration-none"
+              >Log in</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-2">
+      <div class="row">
+        <div class="col-12 col-sm-10 col-md-6 col-lg-5 mx-auto px-3 py-2">
+          <p class="getApp__title text-center mb-2">Get the App.</p>
+          <div
+            class="download__images d-flex justify-content-center align-items-center"
+          >
+            <a
+              href="https://store.google.com/regionpicker"
+              rel="noopener"
+              target="_blank"
+              class="me-3"
+              ><img
+                src="./Assets/Images/downloadGoogle.png"
+                class="w-100 d-block"
+                alt="Get it on Google Play"
+            /></a>
+            <a
+              href="https://apps.microsoft.com/store/apps"
+              rel="noopener"
+              target="_blank"
+              ><img
+                src="./Assets/Images/downloadMicrosoft.png"
+                class="w-100 d-block"
+                alt="Get it on Microsoft Store"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="container mt-2 py-3 text-muted text-center">
+      © 2023 La Galería
+    </footer>
+
+    <!----------------------------- Bootstrap script ------------------------------->
+
+    <script src="./Assets/JS/bootstrap.bundle.min.js"></script>
+
+    <!----------------------------- My script ------------------------------->
+
+    <script src="./Assets/JS/index.js"></script>
+  </body>
+</html>
