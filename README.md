@@ -9,7 +9,7 @@ This is a Simple Template Application. It was created as a practice on HTML, CSS
 
 ## Website link 
 
-[laGaleria.io](https://raniamhelmy.github.io/OsakaPersonalPortfolioBootsrtap/)
+[laGaleria.io](https://raniamhelmy.github.io/LaGaleriaApp/)
 
 ## ScreenShot
 
