@@ -21,7 +21,7 @@ function logOut() {
   });
 
   setTimeout(function () {
-    window.location.href = "/LaGaleriaApp/index.html";
+    window.location.href = "./index.html";
   }, 1000);
 }
 
