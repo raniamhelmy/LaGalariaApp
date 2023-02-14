@@ -67,7 +67,6 @@ function logIn() {
       },1500);
 
     //window.location.href = "dashBoard.html";
-    //userPName.innerHTML=`<i class="fa-solid fa-user"></i>${allUsersContainer[globalIndex].userUName}`
     //logInFlag=true;
   } else {
     console.log("somthing Wrong...");
@@ -75,16 +74,6 @@ function logIn() {
     errorMsg.innerHTML = "incorrect password/E-mail... Please Try Again";
     logInFlag=false
   }
-  // if(logInFlag){
-  //   Swal.fire({
-  //     position: "center",
-  //     icon: "success",
-  //     title: `Hello ${allUsersContainer[globalIndex].userUName}`,
-  //     showConfirmButton: false,
-  //     timer: 1000,
-  //   });
-  // }
-  //return logInFlag;
 }
 
 //LogOut
@@ -118,28 +107,6 @@ function getFromLocalStorage() {
 }
 
 //Check if the login was from a user that have registered before
-/*function matchUser(logData) {
-    //new String('javascript').valueOf() == new String('javascript').valueOf()
-    //new String(logData.logEmail).valueOf() == new String(allUsersContainer[i].userEmail).valueOf()
-    //new String(logData.logPassword).valueOf() == new String(allUsersContainer[i].userPassword).valueOf()
-  for (var i = 0; i < allUsersContainer.length; i++) {
-    if (
-      (new String(logData.logEmail).valueOf() == new String(allUsersContainer[i].userEmail).valueOf()) &&
-      (new String(logData.logPassword).valueOf() == new String(allUsersContainer[i].userPassword).valueOf())
-    ) {
-      console.log("tamam", i);
-      globalIndex = i;
-      //localStorage.setItem("user", usersData[i].name);
-      return true;
-    } else {
-        console.log(logData)
-      console.log("3'lt");
-      return false;
-    }
-  }
-}*/
-
-//Check if the login was from a user that have registered before
 function matchUser(logData) {
   var matchFlag = true;
   for (var i = 0; i < allUsersContainer.length; i++) {
@@ -153,7 +120,6 @@ function matchUser(logData) {
       globalIndex = i;
       break;
     } else {
-      // console.log("3'lt");
       matchFlag = false;
     }
   }
