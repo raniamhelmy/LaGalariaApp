@@ -10,7 +10,6 @@ var emailData = documentHTML.getElementById("emailData");
 
 var errorMsg = documentHTML.getElementById("error-msg");
 
-
 /**********************************Local Storage******************************** */
 var allUsersContainer = [];
 var globalIndex = 0;
@@ -20,9 +19,9 @@ var globalIndex = 0;
 function showHidePassword(password) {
   if (password.type == "password") {
     password.setAttribute("type", "text");
-    toggler.classList.replace("fa-eye", "fa-eye-slash");
-  } else {
     toggler.classList.replace("fa-eye-slash", "fa-eye");
+  } else {
+    toggler.classList.replace("fa-eye", "fa-eye-slash");
     password.setAttribute("type", "password");
   }
 }
@@ -48,23 +47,23 @@ function logIn() {
     errorMsg.classList.add("d-none");
     // console.log("Hello" + " " + allUsersContainer[globalIndex].userUName);
     localStorage.setItem("user", allUsersContainer[globalIndex].userUName);
-    
-      Swal.fire({
-        position: "center",
-        showClass: {
-          popup: 'animate__animated animate__fadeInDown'
-        },
-        hideClass: {
-          popup: 'animate__animated animate__fadeOutUp'
-        },
-        title: `Hello ${allUsersContainer[globalIndex].userUName}`,
-        showConfirmButton: false,
-        timer: 1500,
-      });
-    
-      setTimeout(function(){
-        window.location.href = "./dashBoard.html";
-      },1500);
+
+    Swal.fire({
+      position: "center",
+      showClass: {
+        popup: "animate__animated animate__fadeInDown",
+      },
+      hideClass: {
+        popup: "animate__animated animate__fadeOutUp",
+      },
+      title: `Hello ${allUsersContainer[globalIndex].userUName}`,
+      showConfirmButton: false,
+      timer: 1500,
+    });
+
+    setTimeout(function () {
+      window.location.href = "./dashBoard.html";
+    }, 1500);
 
     //window.location.href = "dashBoard.html";
     //logInFlag=true;
@@ -72,7 +71,7 @@ function logIn() {
     console.log("somthing Wrong...");
     errorMsg.classList.remove("d-none");
     errorMsg.innerHTML = "incorrect password/E-mail... Please Try Again";
-    logInFlag=false
+    logInFlag = false;
   }
 }
 
@@ -83,10 +82,10 @@ function logOut() {
 }
 
 //press enter to add a new user
-function keyBoardLogIn(e){
+function keyBoardLogIn(e) {
   if (e.keyCode === 13) {
     logIn();
-   }
+  }
 }
 
 /***************************************Local Storage***********************/
@@ -111,7 +110,8 @@ function matchUser(logData) {
   var matchFlag = true;
   for (var i = 0; i < allUsersContainer.length; i++) {
     if (
-      (logData.logEmail == allUsersContainer[i].userEmail || logData.logEmail == allUsersContainer[i].userUName  ) &&
+      (logData.logEmail == allUsersContainer[i].userEmail ||
+        logData.logEmail == allUsersContainer[i].userUName) &&
       logData.logPassword == allUsersContainer[i].userPassword
     ) {
       localStorage.setItem("user", allUsersContainer[i].name);

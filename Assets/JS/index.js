@@ -1,4 +1,3 @@
-
 var documentHTML = document;
 var password = documentHTML.getElementById("passwordData");
 //var passwordSign = documentHTML.getElementById("passwordSData");
@@ -40,9 +39,9 @@ var globalIndex = 0;
 function showHidePassword(password) {
   if (password.type == "password") {
     password.setAttribute("type", "text");
-    toggler.classList.replace("fa-eye", "fa-eye-slash");
-  } else {
     toggler.classList.replace("fa-eye-slash", "fa-eye");
+  } else {
+    toggler.classList.replace("fa-eye", "fa-eye-slash");
     password.setAttribute("type", "password");
   }
 }
@@ -121,7 +120,7 @@ function emailValidation() {
   }
 }
 
-//username-validation 
+//username-validation
 function unameValidation() {
   var regex = /^(?=.{4,32}$)(?![_.-])(?!.*[_.]{2})[a-zA-Z0-9._-]+(?<![_.])$/;
 
@@ -270,10 +269,9 @@ function addNewUser() {
       timer: 1500,
     });
 
-    setTimeout(function(){
+    setTimeout(function () {
       window.location.href = "./index.html";
-    },1500);
-    
+    }, 1500);
   } else {
     // for (var i = 0; i < allUsersContainer.length; i++) {
     //   if (allUsersContainer[i].userUName.includes(user.userUName)) {
@@ -323,22 +321,20 @@ function addNewUser() {
           timer: 1500,
         });
 
-        setTimeout(function(){
+        setTimeout(function () {
           window.location.href = "./index.html";
-        },1500);
+        }, 1500);
       }
     } else {
       //console.log("no add");
     }
   }
-
 }
 
-
 //press enter to add a new user
-function keyBoardSignUp(e){
+function keyBoardSignUp(e) {
   if (e.keyCode === 13) {
-    if(validationInput()){
+    if (validationInput()) {
       addNewUser();
     }
     //alert('Enter Pressed');
@@ -367,15 +363,15 @@ function reset() {
 //   };
 //   if(matchUser(logData)){
 //    console.log("signIn Successfully");
-   
+
 //    //console.log( 'Hello' + " " + allUsersContainer[globalIndex].userUName);
 //    localStorage.setItem('user', allUsersContainer[globalIndex].userUName );
 //    window.location.href='dashBoard.html';
 //   }
-     
+
 //   else {
 //       console.log("somthing Wrong...");
-//     } 
+//     }
 // }
 
 //LogOut {needs Update}
@@ -393,8 +389,8 @@ function addToLocalStorage() {
 
 //get Data from local Storage
 function getFromLocalStorage() {
-  if (localStorage.getItem("allUsers") === null ) {
-      allUsersContainer = [];
+  if (localStorage.getItem("allUsers") === null) {
+    allUsersContainer = [];
     if (allUsersContainer.length === 0) {
       allUsersContainer = [];
       returnedData = allUsersContainer;
@@ -406,18 +402,17 @@ function getFromLocalStorage() {
 }
 
 //clear local storage (for purpose usage)
-function localStorageClear()
-{
+function localStorageClear() {
   localStorage.clear();
 }
 
 //validate userName
 function searchOnUserName() {
-   var uNameFlag=true;
+  var uNameFlag = true;
   for (var i = 0; i < allUsersContainer.length; i++) {
     if (allUsersContainer[i].userUName === unameData.value) {
       //console.log(user.userUName,"uname mawgod");
-      uNameFlag=false;
+      uNameFlag = false;
       unameData.classList.add("is-invalid");
       errorMsg.classList.remove("d-none");
       errorMsg.innerHTML = "username you've entered has been used";
@@ -433,7 +428,7 @@ function searchOnUserName() {
 
 //validate email
 function searchOnEmail() {
-  var emailFlag=true;
+  var emailFlag = true;
   for (var i = 0; i < allUsersContainer.length; i++) {
     if (allUsersContainer[i].userEmail === emailSData.value) {
       //console.log(user.userEmail,"email mawgod");
@@ -474,7 +469,6 @@ documentHTML.addEventListener("DOMContentLoaded", function () {
   allUsersContainer = getFromLocalStorage();
 });
 
-
 //check Validation when body Updats
 documentHTML.body.addEventListener("input", function () {
   validationInput();
@@ -513,8 +507,6 @@ if (SignUpBtn) {
 //fire the keyBoardSign function when a specific key is Pressed Down
 documentHTML.addEventListener("keydown", keyBoardSignUp);
 
-
-
 //////////////////////////logIn/LogOut Functionalities/////////////////////////
 // if(emailData){
 //   emailData.addEventListener('blur',function(){
@@ -545,7 +537,7 @@ documentHTML.addEventListener("keydown", keyBoardSignUp);
 //       // User is signed in
 // window.replace('http://localhost:5501/dashBoard.html')
 // //     /*window.location.href='/dashBoard.html';*/
-//    }  
+//    }
 //   else {
 //      // User is signed out
 //      console.log('out')
