@@ -133,32 +133,32 @@ document.addEventListener("keyup", function (e) {
 /************************************************************************************ */
 
 // Check if the user is already logged In to show his Home Page
-documentHTML.addEventListener("DOMContentLoaded", function () {
-  checkOnUserLogIn()
-});
+// documentHTML.addEventListener("DOMContentLoaded", function () {
+//   checkOnUserLogIn()
+// });
 
-if(localStorage.getItem("user")){
-  documentHTML.removeEventListener("DOMContentLoaded", function () {
-  checkOnUserLogIn()
-});
-}
+// if(localStorage.getItem("user")){
+//   documentHTML.removeEventListener("DOMContentLoaded", function () {
+//   checkOnUserLogIn()
+// });
+// }
 
 
-function checkOnUserLogIn(){
-  if (localStorage.getItem("user") === null ) {
-    Swal.fire({
-      position: "center",
-      icon: "error",
-      title: "You must Log In first to see this page",
-      showConfirmButton: false,
-      timer: 1000,
-    });
-    setTimeout(function () {
-      window.location.href = "./index.html";
-    }, 1000);
-}
-else{
-  //window.location.href = "./dashBoard.html";
-}
-}
+// function checkOnUserLogIn(){
+//   if (localStorage.getItem("user") === null ) {
+//     Swal.fire({
+//       position: "center",
+//       icon: "error",
+//       title: "You must Log In first to see this page",
+//       showConfirmButton: false,
+//       timer: 1000,
+//     });
+//     setTimeout(function () {
+//       window.location.href = "./index.html";
+//     }, 1000);
+// }
+// else{
+//   //window.location.href = "./dashBoard.html";
+// }
+// }
 
